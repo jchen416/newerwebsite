@@ -1,0 +1,16 @@
+[0;1;31m×[0m peak.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (]8;;file://ubuntu-s-1vcpu-1gb-nyc3-01/etc/systemd/system/peak.service/etc/systemd/system/peak.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2024-04-14 16:30:37 UTC; 3s ago
+   Duration: 16ms
+    Process: 7325 ExecStart=/bin/bash /root/env/teton/bin/gunicorn --workers 3 --bind unix:/home/root/hike/peak.sock -m 007 wsgi:app [0;1;31m(code=exited, status=2)[0m
+   Main PID: 7325 (code=exited, status=2)
+        CPU: 8ms
+
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 systemd[1]: Started peak.service - Gunicorn instance to serve peak Flask app.
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 bash[7326]: /root/env/teton/bin/gunicorn: line 3: import: command not found
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 bash[7327]: /root/env/teton/bin/gunicorn: line 4: import: command not found
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 bash[7328]: /root/env/teton/bin/gunicorn: line 5: from: command not found
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 bash[7325]: /root/env/teton/bin/gunicorn: line 7: syntax error near unexpected token `('
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 bash[7325]: /root/env/teton/bin/gunicorn: line 7: `    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])'
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mpeak.service: Main process exited, code=exited, status=2/INVALIDARGUMENT[0m
+Apr 14 16:30:37 ubuntu-s-1vcpu-1gb-nyc3-01 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mpeak.service: Failed with result 'exit-code'.[0m
